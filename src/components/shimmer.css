@@ -1,0 +1,21 @@
+.shimmer{
+margin:30px auto auto 70px;
+
+display: grid;
+  grid: 320px/280px 280px 280px 280px;
+
+}
+.for_image{
+    border-radius: 10px;
+    height: 100px;
+    width: 150px;
+    background-color: whitesmoke;
+
+}
+.for_description>h4,.for_description>p{
+    margin-top: 15px;
+    background-color: whitesmoke;
+    height: 10px;
+    width: 150px;
+
+}

@@ -1,0 +1,19 @@
+.header {
+    background-color:burlywood;
+height: 60px;
+
+
+
+}
+.header_item {
+  
+    margin:0px auto  auto 75vw;
+  display: flex;
+  list-style-type: none;
+
+
+}
+.header_item>li{
+margin:8px;
+
+}

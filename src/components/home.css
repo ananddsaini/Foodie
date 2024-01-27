@@ -1,0 +1,27 @@
+.home{
+  align-items: center;
+
+
+}
+
+.item_list {
+  
+  text-align: center;
+  display: grid;
+  grid: 320px/280px 280px 280px 280px; /*   height/(widthOf box1) (widthOf box2) (widthOf box3) .....*/
+
+}
+.search_input{
+  height: 30px;
+  /* margin: 5px auto 60vw px */
+
+
+
+}
+.search_btn{
+  height: 30px;
+  width:120px;
+
+
+
+}

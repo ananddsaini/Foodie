@@ -1,0 +1,20 @@
+.item {
+  /* height: 300px;
+  width: 250px; */
+  text-align: center;
+  background-color: bisque;
+
+ 
+}
+.item > img {
+  
+  height: 100px;
+  width: 150px;
+  object-fit:cover;
+  border-radius: 10px;
+ 
+}
+.RestaurantDescription{
+text-align: center;
+
+}
