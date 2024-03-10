@@ -10,7 +10,7 @@ import { filterSearch } from "../utils/helper";
 export default function Home() {
 
     const [SearchInput, setSearchInput] = useState("");
-    const [Restaurant, setRestaurant] = useState("");
+    const [Restaurant, setRestaurant] = useState();
 
     // phle function ke andar ek async fucntion bna kr api call kr rhe hain
     //function ke andar setRestaurant(state variable) -
@@ -18,13 +18,16 @@ export default function Home() {
     // using useEffect hm us function ko call kr rhe hain
     async function getDataFromAPI() {
 
-        const menuData = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.7534864&lng=76.7418174&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        
+        const menuData =await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.7642332&lng=76.7649497&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const MainData = await menuData.json();
-        const restaurants_var = MainData.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-
-        setRestaurant(restaurants_var);
-        console.log("This is restaurant " + Restaurant);
-        //console.log("https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+imageId);
+        const restaurants_Info = MainData.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        setRestaurant(restaurants_Info);
+        console.log("this is menudata: ",restaurants_Info)
+       
+       
+        
+     //console.log("https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+imageId);
 
     }
     useEffect(function () {
